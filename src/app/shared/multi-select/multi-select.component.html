@@ -1,0 +1,11 @@
+<h1>multi-select works</h1>
+<div tabindex="0" (blur)="onTouched()" class="multiselect-dropdown" (clickOutside)="closeDropdown()">
+    <div class="dropdown-list" [hidden]="!_settings.defaultOpen">
+        <ul class="item2" [style.maxHeight]="_settings.maxHeight+'px'">
+            <li *ngFor="let item of _data; let i = index;" class="multiselect-item-checkbox" [attr.title]="item.tooltip">
+              <input type="checkbox" [attr.aria-label]="item.text" />
+              <div>{{item.text}}</div>
+            </li>
+          </ul>
+    </div>
+</div>
